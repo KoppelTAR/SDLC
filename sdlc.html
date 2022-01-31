@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .accordion {
+          background-color: #eee;
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+        }
+        
+        .active, .accordion:hover {
+          background-color: #ccc; 
+        }
+        
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+        }
+        </style>
+    <title>Software Development Life Cycle</title>
+</head>
+<body>
+    
+    <h1>SDLC</h1>
+    <p>Software Development Life Cycle (SDLC) is a process used by the software industry to design, develop and test high quality softwares. it consists of several phases</p>
+    <ol>
+        <li>
+            <button class="accordion">Planning & Requirment Analysis</button>
+            <div class="panel">
+                <p>Requirement analysis is the most important and fundamental stage in SDLC. It is performed by the senior members of the team with inputs from the customer, the sales department, market surveys and domain experts in the industry. This information is then used to plan the basic project approach.</p>
+            </div>
+        </li>
+        <li>
+            <button class="accordion">Defining Requirments</button>
+            <div class="panel">
+                <p>Once the requirement analysis is done the next step is to clearly define and document the product requirements and get them approved from the customer or the market analysts. This is done through an SRS (Software Requirement Specification) document which consists of all the product requirements to be designed and developed during the project life cycle.</p>
+            </div>
+        </li>
+        <li>
+            <button class="accordion">Design/Architecture</button>
+            <div class="panel">
+                <p>SRS is the reference for product architects to come out with the best architecture for the product to be developed. Based on the requirements specified in SRS, usually more than one design approach for the product architecture is proposed and documented in a DDS (Design Document Specificatio).</p>
+            </div>
+        </li>
+        <li>
+            <button class="accordion">Building the Product</button>
+            <div class="panel">
+                <p>In this stage of SDLC the actual development starts and the product is built. The programming code is generated as per DDS during this stage. If the design is performed in a detailed and organized manner, code generation can be accomplished without much hassle.</p>
+            </div>
+        </li>
+        <li>
+            <button class="accordion">Testing</button>
+            <div class="panel">
+                <p>This stage is usually a subset of all the stages as in the modern SDLC models, the testing activities are mostly involved in all the stages of SDLC. However, this stage refers to the testing only stage of the product where product defects are reported, tracked, fixed and retested, until the product reaches the quality standards defined in the SRS.</p>
+            </div>
+        </li>
+        <li>
+            <button class="accordion">Deployment and Maintenace</button>
+            <div class="panel">
+                <p>Once the product is tested and ready to be deployed it is released formally in the appropriate market. After the product is released in the market, its maintenance is done for the existing customer base.</p>
+            </div>
+        </li>
+    </ol>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sdlc models</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        /* The Modal (background) */
+        .modal1, .modal2, .modal3, .modal4, .modal5, .modal6  {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal-content1, .modal-content2, .modal-content3, .modal-content4, .modal-content5, .modal-content6 {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <h1>sdlc models</h1>
+    <ul>
+        <li><button id="waterfall">Waterfall</button></li>
+        <div id="myModal1" class="modal1">
+        
+            <!-- Modal content -->
+            <div class="modal-content1">
+              <span class="close1">&times;</span>
+              <p>The Waterfall model is the oldest sdlc model. each phase must be completed before the next phase can begin and there is no overlapping in the phases. it consists of 5 stages:
+              </p>
+              <p>
+                1: Requirement Gathering and analysis − All possible requirements of the system to be developed are captured in this phase and documented in a requirement specification document.
+              </p>
+              <p>
+                2: System Design − The requirement specifications from first phase are studied in this phase and the system design is prepared. This system design helps in specifying hardware and system requirements and helps in defining the overall system architecture.
+              </p>
+              <p>
+                3: Implementation − With inputs from the system design, the system is first developed in small programs called units, which are integrated in the next phase. Each unit is developed and tested for its functionality, which is referred to as Unit Testing.
+              </p>
+              <p>
+                4: Integration and Testing − All the units developed in the implementation phase are integrated into a system after testing of each unit. Post integration the entire system is tested for any faults and failures.
+              </p>
+              <p>
+                5: Deployment of system − Once the functional and non-functional testing is done; the product is deployed in the customer environment or released into the market.
+              </p>
+              <p>
+                6: Maintenance − There are some issues which come up in the client environment. To fix those issues, patches are released. Also to enhance the product some better versions are released. Maintenance is done to deliver these changes in the customer environment.
+                </p>
+            </div>
+          
+          </div>
+          
+        <li><button id="iterative">Iterative</button></li>
+        <div id="myModal2" class="modal2">
+        
+            <!-- Modal content -->
+            <div class="modal-content2">
+              <span class="close2">&times;</span>
+              <p>
+              In the Iterative model, iterative process starts with a simple implementation of a small set of the software requirements and iteratively enhances the evolving versions until the complete system is implemented and ready to be deployed.
+              </p>
+              <p>
+              An iterative life cycle model does not attempt to start with a full specification of requirements. Instead, development begins by specifying and implementing just part of the software, which is then reviewed to identify further requirements. This process is then repeated, producing a new version of the software at the end of each iteration of the model.
+              </p>
+              <p>
+              It consists of 3 stages per Iteration:
+              </p>
+              <p>
+               1: Design and development
+              </p>
+              <p>
+              2: Testing
+              </p>
+              <p>
+              3: Implementation
+              </p>
+            </div>
+          
+          </div>
+        <li><button id="prototyping">Prototyping</button></li>
+        <div id="myModal3" class="modal3">
+        
+            <!-- Modal content -->
+            <div class="modal-content3">
+              <span class="close3">&times;</span>
+              <p>
+
+                Alternative to Waterfall model but  its no longer in use.
+              </p>
+              <p>
+                The starting stages involve getting and defining the project requirements from the client. Multiple low fidelity prototypes are made for the client to collect early feedback.
+              </p>
+
+            </div>
+          
+          </div>
+        <li><button id="spiral">Spiral</button></li>
+        <div id="myModal4" class="modal4">
+        
+            <!-- Modal content -->
+            <div class="modal-content4">
+              <span class="close4">&times;</span>
+              <p>4</p>
+            </div>
+          
+          </div>
+        <li><button id="v-shape">V-shape</button></li>
+        <div id="myModal5" class="modal5">
+        
+            <!-- Modal content -->
+            <div class="modal-content5">
+              <span class="close5">&times;</span>
+              <p>5</p>
+            </div>
+          
+          </div>
+        <li><button id="agile">Agile</button></li>
+        <div id="myModal6" class="modal6">
+        
+            <!-- Modal content -->
+            <div class="modal-content6">
+              <span class="close6">&times;</span>
+              <p>6</p>
+            </div>
+          
+          </div>
+    </ul>
+        
+        <script>
+        // Get the modal
+        var modal1 = document.getElementById("myModal1");
+        var modal2 = document.getElementById("myModal2");
+        var modal3 = document.getElementById("myModal3");
+        var modal4 = document.getElementById("myModal4");
+        var modal5 = document.getElementById("myModal5");
+        var modal6 = document.getElementById("myModal6");
+        
+        // Get the button that opens the modal
+        var btn1 = document.getElementById("waterfall");
+        var btn2 = document.getElementById("iterative");
+        var btn3 = document.getElementById("prototyping");
+        var btn4 = document.getElementById("spiral");
+        var btn5 = document.getElementById("v-shape");
+        var btn6 = document.getElementById("agile");
+        
+        // Get the <span> element that closes the modal
+        var span1 = document.getElementsByClassName("close1")[0];
+        var span2 = document.getElementsByClassName("close2")[0];
+        var span3 = document.getElementsByClassName("close3")[0];
+        var span4 = document.getElementsByClassName("close4")[0];
+        var span5 = document.getElementsByClassName("close5")[0];
+        var span6 = document.getElementsByClassName("close6")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn1.onclick = function() {
+          modal1.style.display = "block";
+        }
+        btn2.onclick = function() {
+          modal2.style.display = "block";
+        }
+        btn3.onclick = function() {
+          modal3.style.display = "block";
+        }
+        btn4.onclick = function() {
+          modal4.style.display = "block";
+        }
+        btn5.onclick = function() {
+          modal5.style.display = "block";
+        }
+        btn6.onclick = function() {
+          modal6.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span1.onclick = function() {
+          modal1.style.display = "none";
+        }
+        span2.onclick = function() {
+          modal2.style.display = "none";
+        }
+        span3.onclick = function() {
+          modal3.style.display = "none";
+        }
+        span4.onclick = function() {
+          modal4.style.display = "none";
+        }
+        span5.onclick = function() {
+          modal5.style.display = "none";
+        }
+        span6.onclick = function() {
+          modal6.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal1 ||event.target == modal2 ||event.target == modal3 ||event.target == modal4 ||event.target == modal5 ||event.target == modal6) {
+            modal1.style.display = "none";
+            modal2.style.display = "none";
+            modal3.style.display = "none";
+            modal4.style.display = "none";
+            modal5.style.display = "none";
+            modal6.style.display = "none";
+          }
+        }
+        </script>
+
+        
+</body>
+</html>
